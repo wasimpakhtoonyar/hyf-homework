@@ -1,0 +1,6 @@
+var isFunction = function(o) {
+    return Function.prototype.isPrototypeOf(o);
+};
+
+console.log(isFunction(function(){})); // true
+console.log(isFunction({})); // false
