@@ -1,0 +1,23 @@
+
+const names = ['Tammy', 'Farid', 'Ajmal', 'Khushal', 'Wasim','Nadeem','Sahil'];
+const nameToRemove = 'Tammy';
+
+// Write some code here
+function removeNameOnArray(nameToRemove) {
+  let i=0
+  if(nameToRemove != undefined) {
+    for(; i<names.length; i++) {
+      if(nameToRemove === names[i]) break;  //if name is found, the loop is force stop
+    }
+    for(let j=i;j<names.length-1;j++) {
+      names[j] = names[j+1];
+    }
+    names.pop();
+  }
+  else {
+    console.log("Please enter a  name on the array list")
+  }
+}
+// Code done
+removeNameOnArray(nameToRemove);
+console.log(names); // ['Tammy', 'Farid', 'Ajmal', 'Khushal', 'Wasim','Nadeem','Sahil']
